@@ -11,7 +11,7 @@ const previewsOne = [
 
 const previewsTwo = [
     { preview: "blogMe App", path: "https://github.com/palmerigarrett/blogger-app", img: "/portfolio/blogger.png", border: '50%', rounded: true },
-    { preview: "Computer Science Program Teacher", path: "https://github.com/projectinnovatenewark/csx", img: "/portfolio/csx.png", border: '50%', rounded: false },
+    { preview: "Computer Science Program Volunteer", path: "https://github.com/projectinnovatenewark/csx", img: "/portfolio/csx.png", border: '50%', rounded: false },
 ]
 
 function Landing() {
@@ -21,16 +21,15 @@ function Landing() {
                 <div className="font" id="title">
                     Software Development Portfolio of Garrett Palmeri
                 </div>
-{/*  */}
                 <Row md={{ span: 3 }}>
                     {previewsOne.map(preview =>
-                        <PreviewItem {...preview} />
+                        <PreviewItem key={previewsOne.indexOf(preview)} {...preview} />
                     )}
                 </Row>
 
                 <Row md={{ span: 3, offset: 3 }}>
                     {previewsTwo.map(preview =>
-                        <PreviewItem {...preview} />
+                        <PreviewItem key={previewsTwo.indexOf(preview)} {...preview} />
                     )}
                 </Row>
             </Container>

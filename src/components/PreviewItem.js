@@ -7,7 +7,7 @@ const { useState } = React;
 
 function PreviewItem(props) {
     const [isShown, setIsShown] = useState(false)
-    const { border, img, path, preview, rounded, width } = props;
+    const { border, img, path, preview, rounded } = props;
 
     const toggleVal = isShown ? false : true
     const opacity = isShown ? '.1' : '1';
@@ -34,6 +34,7 @@ function PreviewItem(props) {
                                 className={`${rounded ? "rounded-circle" : ""} img`}
                                 src={img}
                                 style={{ opacity: opacity, borderRadius: border }}
+                                alt=''
                             >
                             </img>
                         </span>
@@ -67,6 +68,7 @@ function PreviewItem(props) {
                                 className={`${rounded ? "rounded-circle" : ""} img`}
                                 src={img}
                                 style={{ opacity: opacity, borderRadius: border }}
+                                alt=''
                             >
                             </img>
                         </span>
@@ -98,6 +100,7 @@ function PreviewItem(props) {
                             className={`${rounded ? "rounded-circle" : ""} img`}
                             src={img}
                             style={{ opacity: opacity, borderRadius: border }}
+                            alt=''
                         >
                         </img>
                     </span>
